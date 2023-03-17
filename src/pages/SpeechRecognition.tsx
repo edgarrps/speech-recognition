@@ -1,11 +1,34 @@
-import { useSpeechRecognition } from 'react-speech-recognition'
+import { useEffect, useState } from 'react'
+import TextareaAutosize from 'react-textarea-autosize'
+import { textArea, toggle } from './styles'
+
+const recognition = window.SpeechRecognition ?? window.webkitSpeechRecognition
+const mic = new recognition()
+mic.continuous = true
+mic.interimResults = true
+mic.lang = 'pt-BR'
 
 export default function SpeechRecognition() {
+    const [hear, setHear] = useState(false)
+    const [note, setNote] = useState('')
+    const handleClick = () => setHear(prevState => !prevState)
+
+    useEffect(() => { handleHear() }, [hear])
+    const handleHear = () => hear ? mic.start() : mic.stop()
+    mic.onresult = e => {
+        const transc = Array.from(e.results).map(result => result[0]).map(result => result.transcript).join('')
+        setNote(transc)
+    }
+    mic.onerror = () => <span>Não consegui te entender, pode repetir? Verifique se seu microfone está habilitado para uso aqui...</span>
 
     return (
         <div className='grid place-items-center space-y-10 pt-20'>
-            <textarea className='rounded-md bg-sky-500/[.2] text-white font-mono font-semibold text-2xl w-[700px] h-[400px] resize-none pl-4 pt-4 pr-4 focus:outline-0'></textarea>
-            <button className='rounded-md bg-yellow-600/[.6] hover:bg-yellow-400/[.6] active:bg-yellow-500 font-extrabold text-white pl-2 pr-2'>Clique</button>
+            <TextareaAutosize value={note} className={textArea} />
+            <label className='relative inline-flex items-center cursor-pointer'>
+                <input onClick={handleClick} type='checkbox' className='sr-only peer' />
+                <div className={toggle} />
+                <span className='ml-3 text-sm font-medium text-gray-900'></span>
+            </label>
         </div>
     )
 }
