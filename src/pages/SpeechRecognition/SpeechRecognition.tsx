@@ -1,12 +1,7 @@
 import { useEffect, useState } from 'react'
 import TextareaAutosize from 'react-textarea-autosize'
-import { textArea, toggle } from './styles'
-
-const recognition = window.SpeechRecognition ?? window.webkitSpeechRecognition
-const mic = new recognition()
-mic.continuous = true
-mic.interimResults = true
-mic.lang = 'pt-BR'
+import { textArea, toggle } from './twSpeechRecognition'
+import { mic } from '../../utils/Recognition'
 
 export default function SpeechRecognition() {
     const [hear, setHear] = useState(false)

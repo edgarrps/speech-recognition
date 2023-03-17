@@ -4,7 +4,7 @@ export const textArea = twMerge(`
 typewriter animate-typewriter 
 rounded-md bg-sky-500/[.2] 
 text-white font-mono font-semibold text-2xl 
-px-4 py-4 mb-2 overflow-y-hidden 
+pl-4 pr-20 py-4 mb-2 overflow-y-hidden 
 resize-none 
 focus:outline-0 
 focus:shadow-xl 
@@ -12,8 +12,8 @@ focus:ease-in-out duration-300
 desktop:w-[700px] 
 laptop:w-[600px] 
 tablet:w-[500px] 
-mobile:w-[300px]`
-)
+mobile:w-[300px]
+`)
 
 export const toggle = twMerge(`
 w-11 h-6 bg-gray-200 

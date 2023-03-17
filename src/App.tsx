@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import SpeechRecognition from './pages/SpeechRecognition'
+import SpeechRecognition from './pages/SpeechRecognition/SpeechRecognition'
 import './App.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
