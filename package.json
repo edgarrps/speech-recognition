@@ -17,7 +17,8 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.9.0",
     "react-textarea-autosize": "^8.4.0",
-    "tailwind-merge": "^1.10.0"
+    "tailwind-merge": "^1.10.0",
+    "tailwindcss-blend-mode": "^1.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

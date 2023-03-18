@@ -18,13 +18,15 @@ export default function SpeechRecognition() {
     mic.onerror = () => <span>Não consegui te entender, pode repetir? Verifique se seu microfone está habilitado para uso aqui...</span>
 
     return (
-        <div className='grid place-items-center space-y-10 pt-20'>
-            <TextareaAutosize value={note} className={textArea} />
-            <label className='relative inline-flex items-center cursor-pointer'>
-                <input onClick={handleClick} type='checkbox' className='sr-only peer' />
-                <div className={toggle} />
-                <span className='ml-3 text-sm font-medium text-gray-900'></span>
-            </label>
+        <div className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-screen'>
+            <div className='grid place-items-center space-y-10 pt-20'>
+                <TextareaAutosize value={note} className={textArea} />
+                <label className='relative inline-flex items-center cursor-pointer'>
+                    <input onClick={handleClick} type='checkbox' className='sr-only peer' />
+                    <div className={toggle} />
+                    <span className='ml-3 text-sm font-medium text-gray-900'></span>
+                </label>
+            </div>
         </div>
     )
 }
