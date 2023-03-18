@@ -23,7 +23,7 @@ export default function GetStarted() {
     useEffect(() => {
       const timeout = setTimeout(() => {
         setText2(second_text.slice(0, text2.length + 1));
-      }, 250);
+      }, 200);
   
       return () => clearTimeout(timeout);
     }, [text2]);
@@ -31,7 +31,7 @@ export default function GetStarted() {
     useEffect(() => {
       const timeout = setTimeout(() => {
         setText3(third_text.slice(0, text3.length + 1));
-      }, 300);
+      }, 200);
   
       return () => clearTimeout(timeout);
     }, [text3]);
@@ -45,7 +45,9 @@ export default function GetStarted() {
             tablet:text-4xl 
             smartphone:text-2xl 
             drop-shadow-md'>
-                {}
+                <div>{text1}</div>
+                <div>{text2}</div>
+                <div>{text3}</div>
             </header>
             <div className='font-poppins'>
                 <video className='absolute w-full h-full object-cover opacity-50' src={video} muted loop autoPlay />
