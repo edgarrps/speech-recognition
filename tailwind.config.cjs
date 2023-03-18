@@ -3,11 +3,17 @@ module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    screens: { 'mobile': '340px', 'tablet': '640px', 'laptop': '1024px', 'desktop': '1280px' },
-    fontFamily: {
-      poppins: ['Poppins', 'sans-serif']
+  ], theme: {
+    extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif']
+      }
+    },
+    screens: {
+      'smartphone':'340px',
+      'tablet': '450px',
+      'inter': '700px',
+      'desktop': '950px',
     },
   },
   plugins: [],
