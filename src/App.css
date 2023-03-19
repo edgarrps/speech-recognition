@@ -9,8 +9,8 @@
 }
 
 .blinking-cursor::after {
-    content: "|";
-    animation: blink 1s step-end infinite;
+    content: '|';
+    animation: blink .8s steps(12, end) infinite;
 }
 
 @keyframes blink {
