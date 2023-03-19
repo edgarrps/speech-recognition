@@ -2,7 +2,7 @@ import { Link, Route, Routes } from "react-router-dom"
 import video from '../videos/bg.mp4'
 import { useState, useEffect } from "react"
 import { twMerge } from "tailwind-merge"
-import { mic, language } from "../utils/Recognition"
+import { language } from "../utils/Recognition"
 
 export default function GetStarted() {
   const [text, setText] = useState('')
