@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom"
 import video from '../../videos/bg.mp4'
-import { link } from "./twGetStarted"
 import { useState, useEffect } from "react"
+import { twMerge } from "tailwind-merge"
 
 export default function GetStarted() {
-
-  const text_ = 'Hello my friend Get Started? Choose your language'
-
   const [text, setText] = useState('')
+  const text_ = 'Hello my friend Get Started? Choose your language'
+  const link = 'pl-2 pr-2 bg-green-500 rounded-md 1'
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -27,14 +26,28 @@ export default function GetStarted() {
             tablet:text-4xl 
             smartphone:text-2xl 
             drop-shadow-md'>
-          <div className='blinking-cursor'>{text.slice(0, 15)}</div>
-          <div className='blinking-cursor'>{text.slice(16, 28)}</div>
-          <div className='blinking-cursor'>{text.slice(29, 49)}</div>
+        <div className='blinking-cursor'>{text.slice(0, 15)}</div>
+        <div className='blinking-cursor'>{text.slice(16, 28)}</div>
+        <div className='blinking-cursor'>{text.slice(29, 49)}</div>
       </header>
       <div className='font-poppins'>
         <video className='absolute w-full h-full object-cover opacity-50' src={video} muted loop autoPlay />
         <div className='flex justify-center align-center items-center'>
-          <Link to={'./pt-br'} className={link}>Start</Link>
+          <div className='absolute 
+                desktop:top-[530px]
+                inter:top-[530px]
+                tablet:top-[430px]
+                smartphone:top-[300px]
+                flex 
+                text-white 
+                desktop:space-x-10
+                inter: space-x-6
+                tablet: space-x-4
+                smartphone: space-x-2 fadein 10'>
+            <Link to={'./en-us'} className={twMerge('link', link)}>English</Link>
+            <Link to={'./es-es'} className={twMerge('link', link)}>Español</Link>
+            <Link to={'./pt-br'} className={twMerge('link', link)}>Português</Link>
+          </div>
         </div>
       </div>
     </>

@@ -10,7 +10,11 @@
 
 .blinking-cursor::after {
     content: '|';
-    animation: blink .8s steps(12, end) infinite;
+    animation: blink 1s steps(12, end) infinite;
+}
+
+.link{
+    animation: fadeIn 12s;
 }
 
 @keyframes blink {
@@ -24,3 +28,8 @@
         opacity: 0;
     }
 }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }

@@ -10,7 +10,7 @@ module.exports = {
       }
     },
     screens: {
-      'smartphone':'340px',
+      'smartphone':'300px',
       'tablet': '450px',
       'inter': '700px',
       'desktop': '950px',
