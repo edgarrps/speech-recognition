@@ -6,7 +6,7 @@ import { language } from "../utils/Recognition"
 
 export default function GetStarted() {
   const [text, setText] = useState('')
-  const text_ = 'Hello my friend Get Started? Choose your language'
+  const text_ = `Hello my friend Let's get started? Choose your language`
   const link = 'pl-2 pr-2 bg-green-500 rounded-md 1'
   const lang = ['English', 'Español', 'Português']
 
@@ -28,8 +28,8 @@ export default function GetStarted() {
             smartphone:text-2xl 
             drop-shadow-md'>
         <div className='blinking-cursor'>{text.slice(0, 15)}</div>
-        <div className='blinking-cursor'>{text.slice(16, 28)}</div>
-        <div className='blinking-cursor'>{text.slice(29, 49)}</div>
+        <div className='blinking-cursor'>{text.slice(16, 34)}</div>
+        <div className='blinking-cursor'>{text.slice(34)}</div>
       </header>
       <div className='font-poppins'>
         <video className='absolute w-full h-full object-cover opacity-50' src={video} muted loop autoPlay />
