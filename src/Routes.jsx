@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
-import RecognitionSpeech from './pages/SpeechRecognition/SpeechRecognition'
+import Eses from './pages/SpeechRecognition/Eses'
+import Enus from './pages/SpeechRecognition/Enus'
+import Ptbr from './pages/SpeechRecognition/Ptbr'
 import GetStarted from './pages/GetStarted'
 import { language } from './utils/Recognition'
 
@@ -8,8 +10,9 @@ export default function (Props) {
         <>
         <Routes>
         <Route exact path='/' element={<GetStarted />} />
-            <Route exact path={'English' ? `/${language[1]}` 
-            : 'Español' ? `/${language[2]}` : `${language[0]}`} element={<RecognitionSpeech/>} />
+            <Route exact path={`/${language[0]}`} element={<Enus/>} />
+            <Route exact path={`/${language[1]}`} element={<Eses/>} />
+            <Route exact path={`/${language[2]}`} element={<Ptbr/>} />
         </Routes>
         </>
     )

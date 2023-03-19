@@ -3,11 +3,11 @@ import TextareaAutosize from 'react-textarea-autosize'
 import { textArea, toggle } from './twSpeechRecognition'
 import { mic } from '../../utils/Recognition'
 
-export default function SpeechRecognition() {
+export default function Eses() {
     const [hear, setHear] = useState(false)
     const [note, setNote] = useState('')
     const handleClick = () => setHear(prevState => !prevState)
-    
+    mic.lang = 'es-ES'
 
     useEffect(() => { handleHear() }, [hear])
     const handleHear = () => hear ? mic.start() : mic.stop()

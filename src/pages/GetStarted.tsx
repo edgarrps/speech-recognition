@@ -2,6 +2,7 @@ import { Link, Route, Routes } from "react-router-dom"
 import video from '../videos/bg.mp4'
 import { useState, useEffect } from "react"
 import { twMerge } from "tailwind-merge"
+import { mic, language } from "../utils/Recognition"
 
 export default function GetStarted() {
   const [text, setText] = useState('')
@@ -44,9 +45,9 @@ export default function GetStarted() {
                 inter: space-x-6
                 tablet: space-x-4
                 smartphone: space-x-2 fadein 10'>
-            <Link to={'./en-US'} className={twMerge('link', link)}>{lang[0]}</Link>
-            <Link to={'./es-ES'} className={twMerge('link', link)}>{lang[1]}</Link>
-            <Link to={'./pt-BR'} className={twMerge('link', link)}>{lang[2]}</Link>
+            <Link to={`/${language[0]}`} className={twMerge('link', link)}>{lang[0]}</Link>
+            <Link to={`/${language[1]}`} className={twMerge('link', link)}>{lang[1]}</Link>
+            <Link to={`/${language[2]}`} className={twMerge('link', link)}>{lang[2]}</Link>
           </div>
         </div>
       </div>
