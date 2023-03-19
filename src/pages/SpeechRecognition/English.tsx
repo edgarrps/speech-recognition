@@ -3,7 +3,7 @@ import TextareaAutosize from 'react-textarea-autosize'
 import { textArea, toggle } from './twSpeechRecognition'
 import { mic } from '../../utils/Recognition'
 
-export default function Enus() {
+export default function English() {
     const [hear, setHear] = useState(false)
     const [note, setNote] = useState('')
     const handleClick = () => setHear(prevState => !prevState)
