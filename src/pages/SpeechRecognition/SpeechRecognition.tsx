@@ -7,7 +7,7 @@ export default function SpeechRecognition() {
     const [hear, setHear] = useState(false)
     const [note, setNote] = useState('')
     const handleClick = () => setHear(prevState => !prevState)
-
+    
 
     useEffect(() => { handleHear() }, [hear])
     const handleHear = () => hear ? mic.start() : mic.stop()

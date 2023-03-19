@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import video from '../../videos/bg.mp4'
+import { Link, Route, Routes } from "react-router-dom"
+import video from '../videos/bg.mp4'
 import { useState, useEffect } from "react"
 import { twMerge } from "tailwind-merge"
 
@@ -7,13 +7,13 @@ export default function GetStarted() {
   const [text, setText] = useState('')
   const text_ = 'Hello my friend Get Started? Choose your language'
   const link = 'pl-2 pr-2 bg-green-500 rounded-md 1'
+  const lang = ['English', 'Español', 'Português']
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setText(text_.slice(0, text.length + 1))
     }, 100)
     return () => clearTimeout(timeout)
-
   }, [text])
 
   return (
@@ -44,9 +44,9 @@ export default function GetStarted() {
                 inter: space-x-6
                 tablet: space-x-4
                 smartphone: space-x-2 fadein 10'>
-            <Link to={'./en-us'} className={twMerge('link', link)}>English</Link>
-            <Link to={'./es-es'} className={twMerge('link', link)}>Español</Link>
-            <Link to={'./pt-br'} className={twMerge('link', link)}>Português</Link>
+            <Link to={'./en-US'} className={twMerge('link', link)}>{lang[0]}</Link>
+            <Link to={'./es-ES'} className={twMerge('link', link)}>{lang[1]}</Link>
+            <Link to={'./pt-BR'} className={twMerge('link', link)}>{lang[2]}</Link>
           </div>
         </div>
       </div>
