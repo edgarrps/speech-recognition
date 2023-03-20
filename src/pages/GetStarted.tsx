@@ -12,7 +12,6 @@ export default function GetStarted() {
     setVisible(true)
   }, 6000)
 
-
     return (
     <>
       <Text />

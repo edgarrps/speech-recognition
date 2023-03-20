@@ -14,7 +14,7 @@
 }
 
 .link{
-    animation: fadeIn 12s;
+    animation: fadeIn 2s;
 }
 
 @keyframes blink {

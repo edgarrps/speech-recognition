@@ -1,11 +1,9 @@
-import { language } from "../utils/Recognition"
-import { Link } from "react-router-dom"
-import { twMerge } from "tailwind-merge"
+import { Link } from 'react-router-dom'
+import { twMerge } from 'tailwind-merge'
 
 export const Links = () => {
 
     const link = 'pl-2 pr-2 bg-green-500 rounded-md 1 hover:bg-green-400 hover:scale-110 ease-in-out duration-300'
-      const lang = ['English', 'Español', 'Português']
 
     return (
         <div className='absolute 
@@ -19,9 +17,9 @@ export const Links = () => {
         inter: space-x-6
         tablet: space-x-4
         smartphone: space-x-2 fadein 10'>
-            <Link to={`/${language[0]}`} className={twMerge('link', link)}>{lang[0]}</Link>
-            <Link to={`/${language[1]}`} className={twMerge('link', link)}>{lang[1]}</Link>
-            <Link to={`/${language[2]}`} className={twMerge('link', link)}>{lang[2]}</Link>
+            <Link to={'/en'} className={twMerge('link', link)}>English</Link>
+            <Link to={'/es'} className={twMerge('link', link)}>Español</Link>
+            <Link to={'/pt'} className={twMerge('link', link)}>Português</Link>
         </div>
     )
 }
