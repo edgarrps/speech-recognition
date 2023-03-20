@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge"
 
 export const Links = () => {
 
-    const link = 'pl-2 pr-2 bg-green-500 rounded-md 1 hover:bg-green-400 hover:scale-105 ease-in-out duration-300'
+    const link = 'pl-2 pr-2 bg-green-500 rounded-md 1 hover:bg-green-400 hover:scale-110 ease-in-out duration-300'
       const lang = ['English', 'Español', 'Português']
 
     return (
