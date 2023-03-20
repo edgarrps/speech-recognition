@@ -5,12 +5,9 @@ export const Text = () => {
     const [text, setText] = useState('')
 
     useEffect(() => {
-        const timeout = setTimeout(() => {
-            setText(text_.slice(0, text.length + 1))
-        }, 100)
+        const timeout = setTimeout(() => {setText(text_.slice(0, text.length + 1))}, 100)
         return () => clearTimeout(timeout)
     }, [text])
-
 
     return (
         <header className='absolute text-white 
