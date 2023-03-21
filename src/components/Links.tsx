@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { twMerge } from 'tailwind-merge'
+import { Languages } from '../data/Languages'
 
 export const Links = () => {
 
@@ -17,9 +18,8 @@ export const Links = () => {
         inter: space-x-6
         tablet: space-x-4
         smartphone: space-x-2 fadein 10'>
-            <Link to={'/en'} className={twMerge('link', link)}>English</Link>
-            <Link to={'/es'} className={twMerge('link', link)}>Español</Link>
-            <Link to={'/pt'} className={twMerge('link', link)}>Português</Link>
-        </div>
+            {Languages.map((value, i) => (
+                <Link key={i} to={`/${value.miclang}`} className={twMerge('link', link)}>{value.title}</Link>
+            ))}</div>
     )
 }
