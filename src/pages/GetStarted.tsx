@@ -2,6 +2,7 @@ import video from '../videos/bg.mp4'
 import { useState } from 'react'
 import { Links } from '../components/Links'
 import { Text } from '../components/Text'
+import { useNavigate } from 'react-router-dom';
 
 
 export default function GetStarted() {
