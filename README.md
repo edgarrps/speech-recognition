@@ -1,7 +1,6 @@
 <h1 align="center">Speech Recognition</h1>
 <br/>
 
-
 <p align="center">
 <img src='https://user-images.githubusercontent.com/68236516/226819095-bd106e2d-674f-4dd6-8daa-38550e6a848a.png'/>
 </p>
